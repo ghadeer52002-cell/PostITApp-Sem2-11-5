@@ -24,7 +24,7 @@ const SharePost=()=>{
         {
             try{
                 const pdata={email,postMsg,lat:null,lng:null}
-                const response=await axios.post("http://localhost:3002/savePost",pdata);
+                const response=await axios.post("https://postitapp-sem2-11-5.onrender.com/savePost",pdata);
                 alert(response.data.message);
             }
             catch(error){
