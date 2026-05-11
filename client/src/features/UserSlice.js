@@ -11,7 +11,7 @@ const initialState={
  
 export const addUser=createAsyncThunk("user/addUser",async(userData)=>{
     try{
-        const response=await axios.post("http://localhost:3002/register",userData);
+        const response=await axios.post("https://postitapp-sem2-11-5.onrender.com/register",userData);
         return response.data.message;
     }
     catch(error){
@@ -21,7 +21,7 @@ export const addUser=createAsyncThunk("user/addUser",async(userData)=>{
 
 export const login=createAsyncThunk("user/login",async(userData)=>{
     try{
-        const response=await axios.post("http://localhost:3002/login",userData);
+        const response=await axios.post("https://postitapp-sem2-11-5.onrender.com/login",userData);
         return response.data;
     }
     catch(error){
